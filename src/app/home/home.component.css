@@ -1,0 +1,61 @@
+
+.header{
+  margin-bottom: 3%;
+}
+.row{
+  display: flex;
+  justify-content: space-around;
+}
+  
+.card {
+  border: 1px solid black;
+  padding: 5px;
+  /* width: 50%; */
+  /* width: calc((100% - 80px) / 5); */
+
+} 
+#card {
+  width: 200px; /* Adjust card width as needed */
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.main{
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Display 5 columns */
+  grid-gap: 20px; /* Adjust the gap between cards as needed */
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+  .search-bar {
+    margin-bottom: 20px;
+    margin-left: 20%;
+  }
+  
+  .search-bar input {
+    padding: 1%;
+    width: 80%;
+    margin-bottom: 5%;
+  }
+  
+  .search-bar button {
+    padding: 1%;
+    background-color: rgba(222, 9, 20);
+    color: #fff;
+    border-radius: 10%;
+  }
+  .movie-card {
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+ 

@@ -1,0 +1,30 @@
+
+
+.container-fluid {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    width: 100%;
+  }
+  h1{
+    color: white;
+    margin-left: 5%;
+}
+  .btn-primary{
+    position: absolute;
+    right: 4%;
+    margin-top: -3%;
+    border-radius: 10%;
+    background-color: red;
+    color: white;
+    width: 7%;
+    height: 5%;
+    border: none;
+  }
+  .header-container {
+    background-image: url('../../assets/MT.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Add any additional styles you need */
+  }
+  

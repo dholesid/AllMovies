@@ -1,0 +1,12 @@
+<div class="container-fluid header-container">
+    <div>
+        <h1>HDMOVIES.com</h1>
+        <!-- Show "Sign Up" button if not on the "/login" route -->
+        <button *ngIf="isLoginRoute()" type="button" class="btn-primary" routerLink="/register">Sign Up</button>
+        <!-- Show "Login" button if on the "/login" route -->
+        <button *ngIf="!isLoginRoute()" type="button" class="btn-primary" routerLink="/login">Login</button>
+
+        <!-- Show "Sign Out" button if not on the "/login" or "/register" route -->
+        <button *ngIf="!isLoginRoute() && !isRegisterRoute()" type="button" class="btn-primary" routerLink="/login">Sign Out</button>
+    </div>
+</div>

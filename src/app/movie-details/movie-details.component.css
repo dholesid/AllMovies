@@ -1,0 +1,35 @@
+.row {
+    display: flex;
+  }
+  
+  .image-container {
+    max-width: 100%; 
+    overflow: hidden; 
+  }
+  
+  .image-container img {
+    width: 100vh; /* Make the image fill the container width */
+    height: 84vh; /* Allow the image to adjust its height according to its aspect ratio */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    object-fit: fill;
+  }
+  
+  .detail {
+    margin-left: 2%;
+  }
+  
+  .movie-info {
+    padding-top: 20px;
+  }
+  
+  .details {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .label {
+    font-weight: bold;
+    color: #555; /* Dark gray color for labels */
+  }
+  

@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <div class="header">
+    <app-header></app-header>
+  </div>
+
+  <div class="row">
+    <div class="col-md-5">
+      <!-- Add a container with fixed dimensions for the image -->
+      <div class="image-container">
+        <img [src]="movieDetails?.poster_path ? 'https://image.tmdb.org/t/p/w1280' + movieDetails.poster_path : 'fallback_image_url'" alt="Image">
+      </div>
+    </div>
+
+    <div class="col-md-7 detail">
+      <!-- Display movie details -->
+      <div *ngIf="movieDetails">
+        <h2>{{ movieDetails.title }}</h2>
+        <p>{{ movieDetails.overview }}</p>
+
+        <hr> <!-- Add a horizontal line for visual separation -->
+
+        <div class="movie-info">
+          <p class="details">Other Details:</p>
+          <p><span class="label">Language:</span> {{ movieDetails.original_language }}</p>
+          <p><span class="label">Release Date:</span> {{ movieDetails.release_date }}</p>
+          <p><span class="label">Runtime:</span> {{ movieDetails.runtime }} minutes</p>
+          <p><span class="label">Genres:</span> {{ getGenres() }}</p>
+          <p><span class="label">Popularity:</span> {{ movieDetails.popularity }}</p>
+          <!-- Add other details as needed -->
+        </div>
+      </div>
+      <!-- Display loading message or error message -->
+      <div *ngIf="!movieDetails">
+        <p>Loading...</p>
+        <!-- You can display an error message here if the data fails to load -->
+      </div>
+    </div>
+  </div>
+</div>

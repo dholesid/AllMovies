@@ -1,0 +1,60 @@
+<div class="container-fluid">
+    <app-header></app-header>
+    <div class="title">
+      <h1>Create an Account</h1>
+      <h4>Sign Up to Download Movies, TV shows and more</h4>
+    </div>
+    <div class="login-container">
+      <div class="background-image"></div>
+      <div class="login-box">
+        <h2>Sign Up</h2>
+        <form #signupForm="ngForm" (ngSubmit)="signup()">
+          <div class="form-group">
+            <input
+              type="text"
+              placeholder="Username"
+              [(ngModel)]="username"
+              name="username"
+              required
+              #usernameInput="ngModel"
+            />
+            <div *ngIf="usernameInput?.invalid && (usernameInput?.dirty || usernameInput?.touched)" class="error">
+                <span *ngIf="usernameInput?.errors?.['required']">Username is required.</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              type="email" 
+              placeholder="Email"
+              [(ngModel)]="email" 
+              name="email"
+              required
+              #emailInput="ngModel"
+            />
+            <div *ngIf="emailInput?.invalid && (emailInput?.dirty || emailInput?.touched)" class="error">
+                <span *ngIf="emailInput?.errors?.['required']">Email is required.</span>
+                <span *ngIf="emailInput?.errors?.['email']">Please enter a valid email address.</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              placeholder="Password"
+              [(ngModel)]="password"
+              name="password"
+              required
+              #passwordInput="ngModel"
+            />
+            <div *ngIf="passwordInput?.invalid && (passwordInput?.dirty || passwordInput?.touched)" class="error">
+                <span *ngIf="passwordInput?.errors?.['required']">Password is required.</span>
+            </div>
+          </div>
+          <button type="submit" [disabled]="signupForm.invalid">Sign Up</button>
+        </form>
+        <div class="login-signup">
+          <span>Already have an account? <a routerLink="/login">Login</a></span> 
+        </div>
+      </div>
+    </div>
+  </div>
+  
